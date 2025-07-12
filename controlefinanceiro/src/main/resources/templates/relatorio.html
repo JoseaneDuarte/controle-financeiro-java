@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Relatório Teste</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f6f6f6;
+            padding: 30px;
+            color: #333;
+        }
+
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            color: #2980b9;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 16px;
+            margin: 5px 0;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        li {
+            background-color: #eaf2f8;
+            padding: 8px;
+            margin: 4px 0;
+            border-radius: 5px;
+        }
+
+        .btn-download {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 10px 18px;
+            background-color: #27ae60;
+            color: #fff;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Relatório de <span th:text="${relatorio.mes}">07/2025</span></h2>
+
+    <p>Total Receitas: <span th:text="${relatorio.totalReceitas}">R$ 0,00</span></p>
+    <p>Total Despesas: <span th:text="${relatorio.totalDespesas}">R$ 0,00</span></p>
+    <p>Saldo: <span th:text="${relatorio.saldo}">R$ 0,00</span></p>
+
+    <h3>Receitas</h3>
+    <ul>
+        <li th:each="r : ${relatorio.receitas}" 
+            th:text="${r.descricao + ' - R$ ' + r.valor}">Salário - R$ 0,00</li>
+    </ul>
+
+    <h3>Despesas</h3>
+    <ul>
+        <li th:each="d : ${relatorio.despesas}" 
+            th:text="${d.descricao + ' - R$ ' + d.valor}">Aluguel - R$ 0,00</li>
+    </ul>
+
+    <a href="/relatorio/view/pdf/2025/07" target="_blank" class="btn-download">
+        📄 Baixar PDF do Relatório
+    </a>
+
+
+</body>
+</html>
