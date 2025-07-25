@@ -75,10 +75,10 @@ Este projeto me ajudou a consolidar conhecimentos em backend Java com Spring, ar
 
 ### 🔍 Visualização no navegador
 
-![Relatório HTML](.assets/)
-![Relatório HTML](./controlefinanceiro/src/main/java/com/joseane/controlefinanceiro/assets/Captura%20de%20tela%202025-07-12%20144530.png)
-![](./)
+![Relatório HTML](./assets/Captura%20de%20tela%202025-07-12%20144506.png)
+![Relatório HTML](./assets/Captura%20de%20tela%202025-07-12%20144530.png)
+
 
 ### 📄 PDF gerado
 
-![Relatório PDF](./controlefinanceiro/src/main/java/com/joseane/controlefinanceiro/assets/Captura%20de%20tela%202025-07-12%20144538.png)
+![Relatório PDF](./assets/Captura%20de%20tela%202025-07-12%20144538.png)
